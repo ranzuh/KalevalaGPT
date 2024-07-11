@@ -1,10 +1,10 @@
 # KalevalaGPT
 
-Training a GPT-like transformer to generate the next characters based on previous ones. 
+Training a GPT-like transformer to generate the next characters based on previous ones. The text is tokenized at the character level, with the first 90% of the Kalevala used for training and the last 10% for validation.
 
 ## Baseline Bigram language model
 
-The Bigram language model predicts the next character based on just the previous character. Training the model for 5000 iterations scores a 2.462 cross-entropy loss on the validation set.
+The Bigram language model predicts the next character based on just the previous character. Training the model for 5000 iterations on the first scores a 2.462 cross-entropy loss on the validation set.
 
 ```zsh
 % python bigram_model.py
