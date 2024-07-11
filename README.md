@@ -1,6 +1,6 @@
 # KalevalaGPT
 
-Training a GPT-like transformer to generate the next characters based on previous ones. The text is tokenized at the character level, with the first 90% of the Kalevala used for training and the last 10% for validation.
+Training a GPT-like transformer to generate the next characters based on previous ones. The dataset is Kalevala, the Finnish national epic by Elias Lönnrot. The text is tokenized at the character level, with the first 90% of the Kalevala used for training and the last 10% for validation.
 
 ## Baseline Bigram language model
 
