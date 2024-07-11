@@ -4,7 +4,7 @@ Training a GPT-like transformer to generate the next characters based on previou
 
 ## Baseline Bigram language model
 
-The Bigram language model ([bigram_model.py](files/bigram_model.py)) predicts the next character based on just the previous character. Training the model for 5000 iterations on the first scores a 2.462 cross-entropy loss on the validation set.
+The Bigram language model ([bigram_model.py](bigram_model.py)) predicts the next character based on just the previous character. Training the model for 5000 iterations on the first scores a 2.462 cross-entropy loss on the validation set.
 
 ```zsh
 % python bigram_model.py
@@ -29,7 +29,7 @@ koilunj
 
 ## GPT-like transformer
 
-This transformer ([gpt_model.py](files/gpt_model.py)) uses self-attention to predict the next character based on previous context. During training, it learns to attend to different parts of the context to better predict the next word. The architecture is similar to the decoder introduced in the seminal paper [Attention Is All You Need](https://proceedings.neurips.cc/paper_files/paper/2017/file/3f5ee243547dee91fbd053c1c4a845aa-Paper.pdf). Training the model for 5000 iterations vastly improves over the Bigram model and scores a 1.479 cross-entropy loss on the validation set. The model is very tiny and the training takes less than five minutes on M1 Macbook Air CPU.  Training a more complex model on proper GPU will lead to a much better performance.
+This transformer ([gpt_model.py](gpt_model.py)) uses self-attention to predict the next character based on previous context. During training, it learns to attend to different parts of the context to better predict the next word. The architecture is similar to the decoder introduced in the seminal paper [Attention Is All You Need](https://proceedings.neurips.cc/paper_files/paper/2017/file/3f5ee243547dee91fbd053c1c4a845aa-Paper.pdf). Training the model for 5000 iterations vastly improves over the Bigram model and scores a 1.479 cross-entropy loss on the validation set. The model is very tiny and the training takes less than five minutes on M1 Macbook Air CPU.  Training a more complex model on proper GPU will lead to a much better performance.
 
 ```zsh
 % python gpt_model.py
